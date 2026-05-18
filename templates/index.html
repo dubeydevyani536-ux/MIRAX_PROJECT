@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="College Project Hub - Collaborate on projects, share ideas, and connect with peers">
+    <title>College Project Hub - Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-brand">
+                <span class="logo-icon">🎓</span>
+                <h1>College Project Hub</h1>
+                <p>Collaborate. Innovate. Showcase.<br>Your one-stop platform for academic projects.</p>
+            </div>
+        </div>
+        <div class="auth-right">
+            <div class="auth-form-box">
+                <h2>Get Started</h2>
+                <p class="subtitle">Login or create an account to continue</p>
+
+                <div id="authAlert" class="alert hidden"></div>
+
+                <div class="auth-tabs">
+                    <button id="loginTab" class="active">Login</button>
+                    <button id="registerTab">Register</button>
+                </div>
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>College Email</label>
+                        <input type="email" id="loginEmail" placeholder="you@college.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login →</button>
+                </form>
+
+                <!-- REGISTER FORM -->
+                <form id="registerForm" class="hidden">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="regName" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>College Email</label>
+                        <input type="email" id="regEmail" placeholder="you@college.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="regPassword" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Your Role</label>
+                        <div class="role-selector">
+                            <div class="role-option" data-role="student">
+                                <span class="role-icon">🎒</span>
+                                <span class="role-label">Student</span>
+                            </div>
+                            <div class="role-option" data-role="coordinator">
+                                <span class="role-icon">🏛️</span>
+                                <span class="role-label">Coordinator</span>
+                            </div>
+                            <div class="role-option" data-role="professor">
+                                <span class="role-icon">👨‍🏫</span>
+                                <span class="role-label">Professor</span>
+                            </div>
+                        </div>
+                        <input type="hidden" id="regRole" value="">
+                    </div>
+                    <div id="cpiField" class="form-group conditional-field">
+                        <label>CPI (CGPA)</label>
+                        <input type="number" id="regCpi" step="0.01" min="0" max="10" placeholder="e.g. 8.5">
+                    </div>
+                    <div id="resumeField" class="form-group conditional-field">
+                        <label>Resume (PDF)</label>
+                        <input type="file" id="regResume" accept=".pdf">
+                    </div>
+                    <div id="clubField" class="form-group conditional-field">
+                        <label>Club Name</label>
+                        <input type="text" id="regClub" placeholder="e.g. Coding Club">
+                    </div>
+                    <div id="researchField" class="form-group conditional-field">
+                        <label>Research Interest Areas (optional)</label>
+                        <textarea id="regResearch" placeholder="e.g. Machine Learning, NLP, Computer Vision..." style="min-height:60px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Create Account →</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

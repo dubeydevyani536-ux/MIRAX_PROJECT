@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - College Project Hub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar"></aside>
+        <main class="main-content">
+            <div class="topbar">
+                <h1 id="pageTitle">Messages</h1>
+                <div id="msgActions"></div>
+            </div>
+            <div class="messages-layout">
+                <div class="conversations-list">
+                    <div class="convo-header">Conversations</div>
+                    <div id="convoList"></div>
+                </div>
+                <div class="chat-area" id="chatArea">
+                    <div class="chat-placeholder">Select a conversation to start chatting</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal-header"><h3 id="modalTitle"></h3><button class="modal-close" onclick="closeModal()">✕</button></div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer" id="modalFooter"></div>
+        </div>
+    </div>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/messages.js"></script>
+</body>
+</html>
